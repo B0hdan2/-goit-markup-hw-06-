@@ -633,8 +633,10 @@ input:focus {
 
     cursor: pointer;
 }
-
-.form__checkbox:checked+.checkbox__icon {
+.form__checkbox:focus+.checkbox__icon{
+    border: 2px solid var(--accentColor);
+}
+.form__checkbox:checked+.checkbox__icon{
     border: 0;
     background-image: url(../images/svg/icon-check\ \(2\).svg);
     background-repeat: no-repeat;
