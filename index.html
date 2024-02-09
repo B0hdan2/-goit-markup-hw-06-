@@ -86,6 +86,87 @@
                 <use href="./images/svg/symbol-defs.svg#icon-close"></use>
               </svg>
             </button>
+            <!-- forma -->
+
+            <form
+              class="form js-speaker-form"
+              name="signup_form"
+              autocomplete="on"
+              novalidate
+            >
+              <b class="form__text"> Залиште свої дані, ми вам передзвонимо </b>
+
+              <div class="form__field">
+                <input
+                  class="form__input"
+                  type="text"
+                  id="user"
+                  name="user"
+                  autocomplete="username"
+                  placeholder=" "
+                />
+                <label class="form__label" for="user">Ім'я </label>
+                <svg class="form__svg" width="12" height="12">
+                  <use href="./images/svg/symbol-defs.svg#icon-person"></use>
+                </svg>
+              </div>
+
+              <div class="form__field">
+                <input
+                  class="form__input"
+                  type="tel"
+                  id="user_tel"
+                  name="tel"
+                  autocomplete="tel"
+                  placeholder=" "
+                />
+                <label class="form__label" for="user_tel">Телефон </label>
+                <svg class="form__svg" width="13" height="13">
+                  <use href="./images/svg/symbol-defs.svg#icon-tel-1"></use>
+                </svg>
+              </div>
+
+              <div class="form__field">
+                <input
+                  class="form__input"
+                  type="email"
+                  id="user_email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder=" "
+                />
+                <label class="form__label" for="user_email">Пошта </label>
+                <svg class="form__svg" width="15" height="12">
+                  <use href="./images/svg/symbol-defs.svg#icon-email-1"></use>
+                </svg>
+              </div>
+
+              <div class="form__field">
+                <label for="coment">Коментар </label>
+                <textarea
+                  id="coment"
+                  name="coment"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Введіть текст"
+                ></textarea>
+              </div>
+
+              <div class="form__agree">
+                <input type="checkbox" id="contract" name="contract" />
+                <label for="contract"
+                  >Погоджуюся з розсилкою та приймаю
+                  <span
+                    ><a class="form__agreement" href="">Умови договору</a></span
+                  ></label
+                >
+              </div>
+
+              <button class="form__button hero__button" type="submit">
+                Відправити
+              </button>
+            </form>
           </div>
         </div>
       </section>
@@ -742,5 +823,6 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>

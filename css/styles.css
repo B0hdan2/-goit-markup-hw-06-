@@ -180,7 +180,13 @@ p {
 
 a {
     text-decoration: none;
-    outline: none;
+}
+
+a:hover,
+a:focus,
+button:hover,
+button:focus {
+    outline: 1px solid var(--accentColor);
 }
 
 img {
@@ -457,11 +463,8 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    min-width: 528px;
-    min-height: 581px;
     border-radius: 4px;
-    display: flex;
-    justify-content: flex-end;
+    text-align: center;
 
     background-color: var(--whiteColor);
 }
@@ -474,8 +477,10 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: auto;
     margin-top: 8px;
     margin-right: 8px;
+    margin-bottom: 10px;
     padding: 0;
 
     border-radius: 100%;
@@ -496,6 +501,116 @@ img {
 }
 
 
+.form {
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
+.form__text {
+    display: inline-block;
+    color: var(--blackColor);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 26px;
+}
+
+.form__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+}
+
+.form__field:nth-child(4) {
+    margin-bottom: 10px;
+}
+.form__field:nth-child(5) {
+    margin-bottom: 20px;
+}
+
+.form__input {
+    width: 448px;
+    height: 40px;
+    padding-left: 30px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+}
+
+
+.form__field  label{
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+    margin-right: auto;
+}
+
+.form__label {
+    position: absolute;
+    top: 14px;
+    left: 32px;
+    margin-bottom: 0;
+
+    transition: transform 250ms var(--cubicBezier);
+}
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label{
+    transform: translate(-30px, -30px);
+}
+
+.form__svg {
+    position: absolute;
+    top: 14px;
+    left: 13px;
+    transition: transform 250ms var(--cubicBezier);
+}
+.form__input:focus ~ .form__svg,
+.form__input:not(:placeholder-shown) ~ .form__svg {
+    fill: var(--accentColor);
+}
+
+
+.form__field textarea {
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    height: 120px;
+    padding: 12px 16px;
+    outline: none;
+
+    resize: none;
+}
+textarea:focus,
+input:focus{
+    border: 1px solid var(--accentColor);
+}
+
+/* .form__agree  input[type='checkbox']{
+} */
+.form__agree {
+    margin-bottom: 30px;
+}
+
+.form__agree label {
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+}
+
+.form__agreement {
+    color: var(--accentColor);
+    text-decoration: underline;
+}
+
+
+.form__button {
+    padding: 10px 52px;
+}
 
 /* MODAL END */
 
