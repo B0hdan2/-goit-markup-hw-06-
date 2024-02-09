@@ -502,6 +502,8 @@ img {
 
 
 .form {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     padding-left: 40px;
     padding-right: 40px;
@@ -528,6 +530,7 @@ img {
 .form__field:nth-child(4) {
     margin-bottom: 10px;
 }
+
 .form__field:nth-child(5) {
     margin-bottom: 20px;
 }
@@ -542,7 +545,7 @@ img {
 }
 
 
-.form__field  label{
+.form__field label {
     font-size: 12px;
     letter-spacing: 0.01em;
     margin-bottom: 4px;
@@ -557,8 +560,9 @@ img {
 
     transition: transform 250ms var(--cubicBezier);
 }
-.form__input:focus + .form__label,
-.form__input:not(:placeholder-shown) + .form__label{
+
+.form__input:focus+.form__label,
+.form__input:not(:placeholder-shown)+.form__label {
     transform: translate(-30px, -30px);
 }
 
@@ -568,13 +572,15 @@ img {
     left: 13px;
     transition: transform 250ms var(--cubicBezier);
 }
-.form__input:focus ~ .form__svg,
-.form__input:not(:placeholder-shown) ~ .form__svg {
+
+.form__input:focus~.form__svg,
+.form__input:not(:placeholder-shown)~.form__svg {
     fill: var(--accentColor);
 }
 
 
 .form__field textarea {
+    width: 448px;
     font-size: 12px;
     letter-spacing: 0.01em;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -586,27 +592,63 @@ img {
 
     resize: none;
 }
+
 textarea:focus,
-input:focus{
+input:focus {
     border: 1px solid var(--accentColor);
 }
 
-/* .form__agree  input[type='checkbox']{
-} */
 .form__agree {
     margin-bottom: 30px;
 }
 
 .form__agree label {
+    display: flex;
+    align-items: center;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
+
 }
+
+.form__checkbox {
+    position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px;
+}
+
+.checkbox__icon {
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 2px;
+
+    cursor: pointer;
+}
+
+.form__checkbox:checked+.checkbox__icon {
+    border: 0;
+    background-image: url(../images/svg/icon-check\ \(2\).svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: padding-box;
+    border-radius: 2px;
+}
+
+
 
 .form__agreement {
     color: var(--accentColor);
     text-decoration: underline;
 }
-
 
 .form__button {
     padding: 10px 52px;
