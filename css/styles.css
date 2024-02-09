@@ -182,9 +182,8 @@ a {
     text-decoration: none;
 }
 
-a:hover,
+
 a:focus,
-button:hover,
 button:focus {
     outline: 1px solid var(--accentColor);
 }
