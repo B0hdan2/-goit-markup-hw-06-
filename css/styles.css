@@ -1041,6 +1041,7 @@ input:focus {
     border-radius: 4px;
 
     cursor: pointer;
+    border: none;
     transition: background-color 250ms var(--cubicBezier);
 }
 
