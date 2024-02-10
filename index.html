@@ -146,7 +146,6 @@
                 <textarea
                   id="coment"
                   name="coment"
-                  id=""
                   cols="30"
                   rows="10"
                   placeholder="Введіть текст"
@@ -155,8 +154,12 @@
 
               <div class="form__agree">
                 <label class="form__label--check">
-                   <input class="form__checkbox" type="checkbox"  name="contract" />
-                   <span class="checkbox__icon"></span>
+                  <input
+                    class="form__checkbox"
+                    type="checkbox"
+                    name="contract"
+                  />
+                  <span class="checkbox__icon"></span>
                   Погоджуюся з розсилкою та приймаю
                   <span>
                     <a class="form__agreement" href="">Умови договору</a>
@@ -761,7 +764,7 @@
         </div>
 
         <div class="footer__networks">
-          <b class="footer__networks-title">приєднуйтесь</b>
+          <b class="footer__title">приєднуйтесь</b>
 
           <ul class="footer__networks--list">
             <li class="footer__networks--item">
@@ -819,6 +822,27 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="footer__mailing">
+          <b class="footer__title">Підпишіться на розсилку</b>
+
+          <form class="js-speaker-form">
+            <input
+              class="footer__mailing-input"
+              type="email"
+              name="email"
+              autocomplete="email"
+              placeholder="E-mail"
+            />
+
+            <button class="footer__mailing--button" type="submit">
+              Підписатися
+              <svg class="footer__mailing--svg" width="24" height="24">
+                <use href="./images/svg/symbol-defs.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>

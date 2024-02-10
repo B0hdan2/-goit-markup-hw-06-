@@ -611,15 +611,15 @@ input:focus {
 
 .form__checkbox {
     position: absolute;
-        white-space: nowrap;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        border: 0;
-        padding: 0;
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        margin: -1px;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 .checkbox__icon {
@@ -632,10 +632,12 @@ input:focus {
 
     cursor: pointer;
 }
-.form__checkbox:focus+.checkbox__icon{
+
+.form__checkbox:focus+.checkbox__icon {
     border: 2px solid var(--accentColor);
 }
-.form__checkbox:checked+.checkbox__icon{
+
+.form__checkbox:checked+.checkbox__icon {
     border: 0;
     background-image: url(../images/svg/icon-check\ \(2\).svg);
     background-repeat: no-repeat;
@@ -964,9 +966,10 @@ input:focus {
 
 .footer__networks {
     margin-left: 70px;
+    margin-right: 93px;
 }
 
-.footer__networks-title {
+.footer__title {
     color: var(--whiteColor);
     font-weight: 700;
     letter-spacing: 0.42px;
@@ -1008,6 +1011,51 @@ input:focus {
 
 /* ----------------------------------NETWORKS END------------------------------ */
 
+
+/* ------------------------------------MAILING START--------------------------------*/
+
+.footer__mailing-input {
+    display: inline;
+    min-width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    background-color: rgba(47, 48, 58, 1);
+    color: var(--brandColor);
+
+}
+
+.footer__mailing--button {
+    color: var(--whiteColor);
+    background-color: var(--accentColor);
+    font-weight: 700;
+    font-size: 16;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 28px;
+    border-radius: 4px;
+
+    cursor: pointer;
+    transition: background-color 250ms var(--cubicBezier);
+}
+
+.footer__mailing--button:hover,
+.footer__mailing--button:focus {
+    background-color: var(--accentButton);
+}
+
+.footer__mailing--svg {
+    margin-left: 10px;
+}
+
+/* .footer__mailing-input {} */
+
+/* ------------------------------------MAILING END--------------------------------*/
 
 /*---------------------------------- FOOTER END ------------------------------------------------*/
 
